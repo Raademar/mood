@@ -4,28 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://unpkg.com/ionicons@4.4.2/dist/css/ionicons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>How'sYourMood?</title>
 </head>
 <body>
-  <nav>
-    <div id="navigation-menu">
-      <h2 id="nav-logo"><a href="index.html">H'sYM?</a></h2>
-      <ul id="nav-links">
-        <li><a href="#" class="btn">Your Feelings</a></li><li><a href="#" class="btn">How'sTheWorldFeeling?</a></li><li><a href="#" class="btn">About Us</a></li>
-      </ul>
-      <ul id="login-links">
-        <li><a href="#" class="btn">Login</a></li>
-        <li><a href="#" class="btn btn-menu">Sign up</a></li>
-      </ul>
+  <section id="first-section">
+    <nav>
+      <div id="navigation-menu">
+        <h2 id="nav-logo"><a href="index.html">H'sYM?</a></h2>
+        <ul id="nav-links">
+          <li><a href="#" class="btn">Your Feelings</a></li><li><a href="#" class="btn">How'sTheWorldFeeling?</a></li><li><a href="#" class="btn">About Us</a></li>
+        </ul>
+        <ul id="login-links">
+          <li><a href="#" class="btn">Login</a></li>
+          <li><a href="#" class="btn btn-menu">Sign up</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="header">
+      <h1 id="main-header">How'sYourMood?</h1>
+      <p>How are you feeling today? We encourage people from all over the world to share their current mood with us. Press the button below to share your mood. Want to see how the world is feeling? Have a look on the menu on the left.</p>
+      <button id="enter-mood-picker">Share todays feelings!</button>
     </div>
-  </nav>
-  <div id="header">
-    <h1 id="main-header">How'sYourMood?</h1>
-    <p>How are you feeling today? We encourage people from all over the world to share their current mood with us. Press the button below to share your mood. Want to see how the world is feeling? Have a look on the menu on the left.</p>
-    <button id="enter-mood-picker">Share todays feelings!</button>
-  </div>
+  </section>
+  <section id="secondary-section">
+    <div class="card-container" id="personal-feelings">
+      <div class="card-inner">
+        <img src="images/personal-feelings.png" alt="personal-feelings">
+        <div class="card-header">
+          <h2 class="card-header-lead">How Are You Feeling?</h2>
+        </div>
+        <div class="card-lead">
+          <ul>
+            <li>
+                <i class="icon ion-md-heart darkred"></i>
+              Share your feelings daily
+            </li>
+            <li>
+                <i class="icon ion-md-heart darkred"></i>
+              Keep track on your mood
+            </li>
+            <li>
+                <i class="icon ion-md-heart darkred"></i>
+              Look back on your journey
+            </li>
+            <li>
+                <i class="icon ion-md-heart darkred"></i>
+              Take notes and what was good or bad
+            </li>
+            <li>
+                <i class="icon ion-md-heart darkred"></i>
+              Share with others
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card-container" id="world-feelings">
+      <div class="card-inner">
+        <img src="" alt="globe-feelings">
+        <div class="card-header">
+          <h2 class="card-header-lead">How Is The World Feeling?</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    
+  </footer>
   <script src="main.js"></script>
   </body>
 </html>
