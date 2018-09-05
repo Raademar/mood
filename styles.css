@@ -29,8 +29,14 @@ body {
   color: #314d69;
 }
 
+#second-section-lead {
+  grid-column: 3/7;
+  padding-bottom: 50px;
+  font-size: 1.5rem;
+}
+
 .card-inner {
-  padding: 0 22%;
+  padding: 15% 22%;
 }
 
 .card-container img {
@@ -42,21 +48,38 @@ body {
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
   border-left: 1px solid lightgrey;
+  border-radius: 5px 0 0 5px;
+  transition: all .1s ease; 
 }
+
 
 #world-feelings {
   grid-column: 5/8;
   border: 1px solid lightgrey;
+  border-radius: 0 5px 5px 0;
+  transition: all .1s ease; 
 }
 
+#personal-feelings:hover, #world-feelings:hover {
+  box-shadow: 0 5px 6px -6px black;
+  transition: all .1s ease; 
+}
 .card-lead {
   text-align: start;
+  padding: 5% 0px;
 }
 
 .card-lead ul {
   list-style: none;
   padding: 10px;
   line-height: 35px;
+}
+
+.card-paragraph {
+  text-align: start;
+  font-size: 0.8rem;
+  font-weight: 100;
+  margin-bottom: 2rem;
 }
 
 a {
@@ -126,14 +149,8 @@ a:visited {
 }
 
 #enter-mood-picker:hover {
-  border: 2px solid #ffefef;
-  border-radius: 10px;
-  background: #ffefef;
-  color: #00B4DB;
-  font-size: 1rem;
-  cursor: pointer;
   transition: .3s;
-  box-shadow: 3px 10px 20px 10px #0083B0;
+  box-shadow: 0px 6px 10px -6px black;
 }
 
 .btn {
@@ -153,11 +170,32 @@ a:visited {
   opacity: 0.7;
 }
 
+.btn-card {
+  background: #DB2763;
+  color: #ffefef;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all .2s ease; 
+}
+
+.btn-card:hover {
+  cursor: pointer;
+  box-shadow: 0px 4px 10px -6px black;
+  transition: all .1s ease; 
+}
+
 #footer {
   height: 200px;
-  background: #ffefef;
+  background: #f9f6f0;
 }
 
 .darkred {
-  color: #A42222;
+  color: #C1292E;
+}
+
+.icon-padding {
+  padding-right: 10px;
 }
