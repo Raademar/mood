@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://unpkg.com/ionicons@4.4.2/dist/css/ionicons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="styles.css">
   <title>How'sYourMood?</title>
 </head>
@@ -14,18 +15,26 @@
     <nav>
       <div id="navigation-menu">
         <h2 id="nav-logo"><a href="index.html">H'sYM?</a></h2>
-        <ul id="nav-links">
-          <li><a href="#" class="btn">Your Feelings</a></li><li><a href="#" class="btn">How'sTheWorldFeeling?</a></li><li><a href="#" class="btn">About Us</a></li>
-        </ul>
         <ul id="login-links">
-          <li><a href="#" class="btn">Login</a></li>
-          <li><a href="#" class="btn btn-menu">Sign up</a></li>
+          <li><a href="#" class="btn" id="login-btn">Login</a></li>
+          <li><a href="#" class="btn btn-menu" id="signup-btn">Sign up</a></li>
+        </ul>
+        <ul id="login-links-icons-small-screens">
+          <li><a href="#" id="login-btn-icon"><i class="icon ion-md-person icon-padding"></i></a></li>
+          <li><a href="#" id="signup-btn-icon"><i class="icon ion-md-person-add icon-padding"></i></a></li>
+          <li></li>
         </ul>
       </div>
     </nav>
-    <div id="header">
+    <div id="header" class="animated fadeInUp">
       <h1 id="main-header">How'sYourMood?</h1>
-      <p>How are you feeling today? We encourage people from all over the world to share their current mood with us. Press the button below to share your mood. Want to see how the world is feeling? Have a look on the menu on the left.</p>
+      <p id="mood-lead">How are you feeling today? We encourage people from all over the world to share their current mood with us. Press the button below to share your mood. Want to see how the world is feeling? Have a look on the menu on the left.</p>
+      <div id="first-mood-smiley" class="animated hide">
+        <img src="images/personal-feelings.png" alt="personal-feelings">
+      </div>
+      <div id="second-mood-smiley" class="hide">
+        <img src="images/smiley.png" alt="smileyface">
+      </div>
       <button id="enter-mood-picker">Share todays feelings!</button>
     </div>
   </section>
@@ -77,17 +86,17 @@
       <div class="card-inner">
         <img src="images/smiley.png" alt="smileyface">
         <div class="card-header">
-          <h2 class="card-header-lead">How Is The World Feeling?</h2>
+          <h2 class="card-header-lead">How's the World Feeling?</h2>
         </div>
         <div class="card-lead">
             <ul>
               <li>
                   <i class="icon ion-md-heart darkred icon-padding"></i>
-                See how the world is feeling
+                How is the world feeling
               </li>
               <li>
                   <i class="icon ion-md-heart darkred icon-padding"></i>
-                Track how to mood of the world change
+                How the mood of the world change
               </li>
               <li>
                   <i class="icon ion-md-heart darkred icon-padding"></i>
@@ -109,13 +118,37 @@
               </li>
             </ul>
           </div>
-          <p class="card-paragraph">How is the world feeling right now? With us you keep track!</p>
+          <p class="card-paragraph">How is the world feeling right now? With us you can keep track!</p>
           <button class="btn-card">Check up on the world!</button>
       </div>
     </div>
   </section>
   <footer id="footer">
-    
+    <div class="footer-links" id="footer-us-links">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-links" id="footer-service-links">
+      <ul>
+        <li><a href="#">What we offer</a></li>
+        <li><a href="#">Your feelings</a></li>
+        <li><a href="#">World feelings</a></li>
+        <li><a href="#">Service agreement</a></li>
+      </ul>
+    </div>
+    <div class="footer-links" id="footer-personal-links">
+      <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Social </a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+
   </footer>
   <script src="main.js"></script>
   </body>
