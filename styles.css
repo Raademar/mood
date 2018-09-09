@@ -26,7 +26,7 @@ body {
 
 #mood-smileys {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 }
 
 #first-mood-smiley {
@@ -48,7 +48,22 @@ body {
 #fifth-mood-smiley {
   grid-column: 6/7;
 }
-
+#text-area-feelings {
+  grid-column: 3/6;
+}
+#text-area-feelings textarea {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  outline: none;
+  resize: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 300;
+  background: #ffefef;
+  color: #314d69;
+}
 
 #first-mood-smiley img, #second-mood-smiley img, #third-mood-smiley img, #fourth-mood-smiley img, #fifth-mood-smiley img {
   max-width: 200px;
@@ -242,7 +257,7 @@ a:visited {
 .btn-card {
   background: #DB2763;
   color: #ffefef;
-  padding: 5% 10%;
+  padding: 2% 5%;
   border: none;
   border-radius: 5px;
   font-weight: 600;
@@ -252,6 +267,24 @@ a:visited {
 }
 
 .btn-card:hover {
+  cursor: pointer;
+  box-shadow: 0px 4px 10px -6px black;
+  transition: all .1s ease; 
+}
+
+.btn-text-area {
+  background: #DB2763;
+  color: #ffefef;
+  padding: 2% 5%;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all .2s ease; 
+  margin-top: 50px;
+}
+
+.btn-text-area:hover {
   cursor: pointer;
   box-shadow: 0px 4px 10px -6px black;
   transition: all .1s ease; 
