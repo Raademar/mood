@@ -1,3 +1,7 @@
+"use strict";
+
+import {sendUserMood} from './dbAjax';
+
 // Query Selectors
 const $smileys = document.querySelectorAll('.smiley');
 const feelingsTextArea = document.querySelector('#text-area-feelings')
@@ -27,12 +31,15 @@ const curDate = new Date().toJSON().slice(0,10).replace(/-/g,'/');
 
 // Function for assigning the users submitted mood to local storage
 function setLocalStorage(userMoodEntry, userMoodNote){
+  let userMoodArray = [];
   let userMoodObj = {
     'date': curDate,
-    'user mood': userMoodEntry,
+    'usermood': userMoodEntry,
     'note': userMoodNote
   }
-  localStorage.setItem('User Entry', JSON.stringify(userMoodObj));
+  userMoodArray.push(userMoodObj);
+  localStore.getItem()
+  localStorage.setItem('userentry', JSON.stringify(userMoodArray));
 };
 
 let pickedMood = 0;
@@ -56,6 +63,7 @@ submitFeeligns.addEventListener('click', function(){
   setLocalStorage(pickedMood, moodNote);
   toggleModal();
   toggleSuccessMessage();
+  sendUserMood(curDate, pickedMood, moodNote);
   setTimeout(() => {
     toggleSuccessMessage();
   }, 3000)
