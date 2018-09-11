@@ -1,0 +1,23 @@
+{
+  "name": "mood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raademar/mood.git"
+  },
+  "keywords": [],
+  "author": "Mattias Rådemar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raademar/mood/issues"
+  },
+  "homepage": "https://github.com/raademar/mood#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.9.7"
+  }
+}
