@@ -21,6 +21,10 @@ function enterFeelings(e) {
   }, 200)
 };
 
+
+// Current date generator.
+const curDate = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+
 // Function for assigning the users submitted mood to local storage
 function setLocalStorage(userMoodEntry, userMoodNote){
   let userMoodObj = {
@@ -30,9 +34,6 @@ function setLocalStorage(userMoodEntry, userMoodNote){
   }
   localStorage.setItem('User Entry', JSON.stringify(userMoodObj));
 };
-
-// Current date generator.
-const curDate = new Date().toJSON().slice(0,10).replace(/-/g,'/');
 
 let pickedMood = 0;
 let moodNote = '';
