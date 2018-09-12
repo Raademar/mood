@@ -3,7 +3,7 @@
 import {sendUserMood} from './dbAjax';
 
 // Query Selectors
-const $smileys = document.querySelectorAll('.smiley');
+const smileys = [...document.querySelectorAll('.smiley')];
 const feelingsTextArea = document.querySelector('#text-area-feelings')
 const shareFeelings = document.querySelector('#enter-mood-picker');
 const moodLeadText = document.querySelector('#mood-lead');
@@ -16,7 +16,7 @@ const submitFeeligns = document.querySelector('#submit-feelings');
 function enterFeelings(e) {
   e.preventDefault();
   setInterval(() => {
-    $smileys.forEach(function(item){
+    smileys.forEach(function(item){
       item.classList.remove('hide'), item.classList.add('fadeInLeft')
     });
     feelingsTextArea.classList.remove('hide');
@@ -31,14 +31,13 @@ const curDate = new Date().toJSON().slice(0,10).replace(/-/g,'/');
 
 // Function for assigning the users submitted mood to local storage
 function setLocalStorage(userMoodEntry, userMoodNote){
-  let userMoodArray = [];
   let userMoodObj = {
     'date': curDate,
     'usermood': userMoodEntry,
     'note': userMoodNote
   }
+  let userMoodArray = JSON.parse(localStorage.getItem('userentry')) || [];
   userMoodArray.push(userMoodObj);
-  localStore.getItem()
   localStorage.setItem('userentry', JSON.stringify(userMoodArray));
 };
 
@@ -51,10 +50,12 @@ const userMedianMood = arr => arr.reduce((a,b) => a + b, 0) / userMood.length;
 
 shareFeelings.addEventListener('click', enterFeelings);
 
-// Assign clickListener for each smiley. >>> FIX PROBLEM WITH NUMBER NOT UPDATING WHEN CHOSING NEW SMILEY <<<
-[...$smileys].forEach($smiley => $smiley.addEventListener('click', function(){
-  event.target.classList.toggle('pickedMood');
-  pickedMood = parseInt($smiley.dataset.mood)
+
+// Assign clickListener for each smiley.
+smileys.forEach(smiley => smiley.addEventListener('click', function(){
+  smileys.forEach(item => item.classList.remove('pickedMood'));
+  event.currentTarget.classList.add('pickedMood');
+  pickedMood = parseInt(smiley.dataset.mood)
 }));
 
 // Submit feelings click listener, toggling the modals after submitted and saved in local storage.
@@ -63,7 +64,7 @@ submitFeeligns.addEventListener('click', function(){
   setLocalStorage(pickedMood, moodNote);
   toggleModal();
   toggleSuccessMessage();
-  sendUserMood(curDate, pickedMood, moodNote);
+  //sendUserMood(curDate, pickedMood, moodNote); DEVELOP THIS FURTHER ON
   setTimeout(() => {
     toggleSuccessMessage();
   }, 3000)

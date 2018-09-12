@@ -124,7 +124,7 @@ var _dbAjax = require('./dbAjax');
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 // Query Selectors
-var $smileys = document.querySelectorAll('.smiley');
+var smileys = [].concat(_toConsumableArray(document.querySelectorAll('.smiley')));
 var feelingsTextArea = document.querySelector('#text-area-feelings');
 var shareFeelings = document.querySelector('#enter-mood-picker');
 var moodLeadText = document.querySelector('#mood-lead');
@@ -137,7 +137,7 @@ var submitFeeligns = document.querySelector('#submit-feelings');
 function enterFeelings(e) {
   e.preventDefault();
   setInterval(function () {
-    $smileys.forEach(function (item) {
+    smileys.forEach(function (item) {
       item.classList.remove('hide'), item.classList.add('fadeInLeft');
     });
     feelingsTextArea.classList.remove('hide');
@@ -146,21 +146,20 @@ function enterFeelings(e) {
   }, 200);
 };
 
+// Current date generator.
+var curDate = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
+
 // Function for assigning the users submitted mood to local storage
 function setLocalStorage(userMoodEntry, userMoodNote) {
-  var userMoodArray = [];
   var userMoodObj = {
     'date': curDate,
     'usermood': userMoodEntry,
     'note': userMoodNote
   };
+  var userMoodArray = JSON.parse(localStorage.getItem('userentry')) || [];
   userMoodArray.push(userMoodObj);
-  localStore.getItem();
   localStorage.setItem('userentry', JSON.stringify(userMoodArray));
 };
-
-// Current date generator.
-var curDate = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
 
 var pickedMood = 0;
 var moodNote = '';
@@ -175,11 +174,14 @@ var userMedianMood = function userMedianMood(arr) {
 
 shareFeelings.addEventListener('click', enterFeelings);
 
-// Assign clickListener for each smiley. >>> FIX PROBLEM WITH NUMBER NOT UPDATING WHEN CHOSING NEW SMILEY <<<
-[].concat(_toConsumableArray($smileys)).forEach(function ($smiley) {
-  return $smiley.addEventListener('click', function () {
-    event.target.classList.toggle('pickedMood');
-    pickedMood = parseInt($smiley.dataset.mood);
+// Assign clickListener for each smiley.
+smileys.forEach(function (smiley) {
+  return smiley.addEventListener('click', function () {
+    smileys.forEach(function (item) {
+      return item.classList.remove('pickedMood');
+    });
+    event.currentTarget.classList.add('pickedMood');
+    pickedMood = parseInt(smiley.dataset.mood);
   });
 });
 
@@ -189,7 +191,7 @@ submitFeeligns.addEventListener('click', function () {
   setLocalStorage(pickedMood, moodNote);
   toggleModal();
   toggleSuccessMessage();
-  (0, _dbAjax.sendUserMood)(curDate, pickedMood, moodNote);
+  //sendUserMood(curDate, pickedMood, moodNote); DEVELOP THIS FURTHER ON
   setTimeout(function () {
     toggleSuccessMessage();
   }, 3000);
@@ -219,7 +221,7 @@ function windowOnClick(event) {
 trigger.addEventListener('click', toggleModal);
 closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowOnClick);
-},{"./dbAjax":"dbAjax.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./dbAjax":"dbAjax.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -248,7 +250,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '55693' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51866' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -389,5 +391,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
 //# sourceMappingURL=/main.00ce1cb3.map
