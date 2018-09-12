@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"dbAjax.js":[function(require,module,exports) {
+})({"js/dbAjax.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -119,7 +119,7 @@ function sendUserMood(date, usermood, usernote) {
 },{}],"main.js":[function(require,module,exports) {
 "use strict";
 
-var _dbAjax = require('./dbAjax');
+var _dbAjax = require('./js/dbAjax');
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
@@ -189,6 +189,8 @@ smileys.forEach(function (smiley) {
 submitFeeligns.addEventListener('click', function () {
   moodNote = JSON.stringify(moodNoteTextarea.value);
   setLocalStorage(pickedMood, moodNote);
+  moodNoteTextarea.value = '';
+  pickedMood = 0;
   toggleModal();
   toggleSuccessMessage();
   //sendUserMood(curDate, pickedMood, moodNote); DEVELOP THIS FURTHER ON
@@ -221,7 +223,7 @@ function windowOnClick(event) {
 trigger.addEventListener('click', toggleModal);
 closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowOnClick);
-},{"./dbAjax":"dbAjax.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./js/dbAjax":"js/dbAjax.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 

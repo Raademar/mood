@@ -1,4 +1,5 @@
-import Chart from 'chart.js';
+
+import Chart from '../chart.js';
 
 const data = JSON.parse(localStorage.getItem('userentry'));
 let ctx = document.getElementById("myChart");
@@ -45,14 +46,4 @@ let myChart = new Chart(ctx, {
   }
 });
 
-// const tdMaker = (text) => {
-//   const td = document.createElement('td');
-//   td.textContent = text;
-//   th.appendChild(td);
-// }
-
-// data.forEach(item => {
-//   tdMaker(item.date);
-//   tdMaker(item.usermood);
-//   tdMaker(item.note);
-// });
+export function myChart(){};

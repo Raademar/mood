@@ -1,6 +1,6 @@
 "use strict";
 
-import {sendUserMood} from './dbAjax';
+import {sendUserMood} from './js/dbAjax';
 
 // Query Selectors
 const smileys = [...document.querySelectorAll('.smiley')];
@@ -62,6 +62,8 @@ smileys.forEach(smiley => smiley.addEventListener('click', function(){
 submitFeeligns.addEventListener('click', function(){
   moodNote = JSON.stringify(moodNoteTextarea.value);
   setLocalStorage(pickedMood, moodNote);
+  moodNoteTextarea.value = '';
+  pickedMood = 0;
   toggleModal();
   toggleSuccessMessage();
   //sendUserMood(curDate, pickedMood, moodNote); DEVELOP THIS FURTHER ON

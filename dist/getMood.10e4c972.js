@@ -18984,8 +18984,13 @@ Chart.canvasHelpers = Chart.helpers.canvas;
  */
 Chart.layoutService = Chart.layouts;
 
-},{"./core/core":"node_modules/chart.js/src/core/core.js","./helpers/index":"node_modules/chart.js/src/helpers/index.js","./core/core.helpers":"node_modules/chart.js/src/core/core.helpers.js","./core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","./core/core.element":"node_modules/chart.js/src/core/core.element.js","./elements/index":"node_modules/chart.js/src/elements/index.js","./core/core.interaction":"node_modules/chart.js/src/core/core.interaction.js","./core/core.layouts":"node_modules/chart.js/src/core/core.layouts.js","./platforms/platform":"node_modules/chart.js/src/platforms/platform.js","./core/core.plugins":"node_modules/chart.js/src/core/core.plugins.js","./core/core.ticks":"node_modules/chart.js/src/core/core.ticks.js","./core/core.animation":"node_modules/chart.js/src/core/core.animation.js","./core/core.controller":"node_modules/chart.js/src/core/core.controller.js","./core/core.datasetController":"node_modules/chart.js/src/core/core.datasetController.js","./core/core.scaleService":"node_modules/chart.js/src/core/core.scaleService.js","./core/core.scale":"node_modules/chart.js/src/core/core.scale.js","./core/core.tooltip":"node_modules/chart.js/src/core/core.tooltip.js","./scales/scale.linearbase":"node_modules/chart.js/src/scales/scale.linearbase.js","./scales/scale.category":"node_modules/chart.js/src/scales/scale.category.js","./scales/scale.linear":"node_modules/chart.js/src/scales/scale.linear.js","./scales/scale.logarithmic":"node_modules/chart.js/src/scales/scale.logarithmic.js","./scales/scale.radialLinear":"node_modules/chart.js/src/scales/scale.radialLinear.js","./scales/scale.time":"node_modules/chart.js/src/scales/scale.time.js","./controllers/controller.bar":"node_modules/chart.js/src/controllers/controller.bar.js","./controllers/controller.bubble":"node_modules/chart.js/src/controllers/controller.bubble.js","./controllers/controller.doughnut":"node_modules/chart.js/src/controllers/controller.doughnut.js","./controllers/controller.line":"node_modules/chart.js/src/controllers/controller.line.js","./controllers/controller.polarArea":"node_modules/chart.js/src/controllers/controller.polarArea.js","./controllers/controller.radar":"node_modules/chart.js/src/controllers/controller.radar.js","./controllers/controller.scatter":"node_modules/chart.js/src/controllers/controller.scatter.js","./charts/Chart.Bar":"node_modules/chart.js/src/charts/Chart.Bar.js","./charts/Chart.Bubble":"node_modules/chart.js/src/charts/Chart.Bubble.js","./charts/Chart.Doughnut":"node_modules/chart.js/src/charts/Chart.Doughnut.js","./charts/Chart.Line":"node_modules/chart.js/src/charts/Chart.Line.js","./charts/Chart.PolarArea":"node_modules/chart.js/src/charts/Chart.PolarArea.js","./charts/Chart.Radar":"node_modules/chart.js/src/charts/Chart.Radar.js","./charts/Chart.Scatter":"node_modules/chart.js/src/charts/Chart.Scatter.js","./plugins":"node_modules/chart.js/src/plugins/index.js"}],"getMood.js":[function(require,module,exports) {
+},{"./core/core":"node_modules/chart.js/src/core/core.js","./helpers/index":"node_modules/chart.js/src/helpers/index.js","./core/core.helpers":"node_modules/chart.js/src/core/core.helpers.js","./core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","./core/core.element":"node_modules/chart.js/src/core/core.element.js","./elements/index":"node_modules/chart.js/src/elements/index.js","./core/core.interaction":"node_modules/chart.js/src/core/core.interaction.js","./core/core.layouts":"node_modules/chart.js/src/core/core.layouts.js","./platforms/platform":"node_modules/chart.js/src/platforms/platform.js","./core/core.plugins":"node_modules/chart.js/src/core/core.plugins.js","./core/core.ticks":"node_modules/chart.js/src/core/core.ticks.js","./core/core.animation":"node_modules/chart.js/src/core/core.animation.js","./core/core.controller":"node_modules/chart.js/src/core/core.controller.js","./core/core.datasetController":"node_modules/chart.js/src/core/core.datasetController.js","./core/core.scaleService":"node_modules/chart.js/src/core/core.scaleService.js","./core/core.scale":"node_modules/chart.js/src/core/core.scale.js","./core/core.tooltip":"node_modules/chart.js/src/core/core.tooltip.js","./scales/scale.linearbase":"node_modules/chart.js/src/scales/scale.linearbase.js","./scales/scale.category":"node_modules/chart.js/src/scales/scale.category.js","./scales/scale.linear":"node_modules/chart.js/src/scales/scale.linear.js","./scales/scale.logarithmic":"node_modules/chart.js/src/scales/scale.logarithmic.js","./scales/scale.radialLinear":"node_modules/chart.js/src/scales/scale.radialLinear.js","./scales/scale.time":"node_modules/chart.js/src/scales/scale.time.js","./controllers/controller.bar":"node_modules/chart.js/src/controllers/controller.bar.js","./controllers/controller.bubble":"node_modules/chart.js/src/controllers/controller.bubble.js","./controllers/controller.doughnut":"node_modules/chart.js/src/controllers/controller.doughnut.js","./controllers/controller.line":"node_modules/chart.js/src/controllers/controller.line.js","./controllers/controller.polarArea":"node_modules/chart.js/src/controllers/controller.polarArea.js","./controllers/controller.radar":"node_modules/chart.js/src/controllers/controller.radar.js","./controllers/controller.scatter":"node_modules/chart.js/src/controllers/controller.scatter.js","./charts/Chart.Bar":"node_modules/chart.js/src/charts/Chart.Bar.js","./charts/Chart.Bubble":"node_modules/chart.js/src/charts/Chart.Bubble.js","./charts/Chart.Doughnut":"node_modules/chart.js/src/charts/Chart.Doughnut.js","./charts/Chart.Line":"node_modules/chart.js/src/charts/Chart.Line.js","./charts/Chart.PolarArea":"node_modules/chart.js/src/charts/Chart.PolarArea.js","./charts/Chart.Radar":"node_modules/chart.js/src/charts/Chart.Radar.js","./charts/Chart.Scatter":"node_modules/chart.js/src/charts/Chart.Scatter.js","./plugins":"node_modules/chart.js/src/plugins/index.js"}],"lineChart.js":[function(require,module,exports) {
 'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.myChart = myChart;
 
 var _chart = require('chart.js');
 
@@ -19038,18 +19043,16 @@ var myChart = new _chart2.default(ctx, {
     }
 });
 
-// const tdMaker = (text) => {
-//   const td = document.createElement('td');
-//   td.textContent = text;
-//   th.appendChild(td);
-// }
+function myChart() {};
+},{"chart.js":"node_modules/chart.js/src/chart.js"}],"getMood.js":[function(require,module,exports) {
+'use strict';
 
-// data.forEach(item => {
-//   tdMaker(item.date);
-//   tdMaker(item.usermood);
-//   tdMaker(item.note);
-// });
-},{"chart.js":"node_modules/chart.js/src/chart.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var _lineChart = require('./lineChart');
+
+var _lineChart2 = _interopRequireDefault(_lineChart);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./lineChart":"lineChart.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
