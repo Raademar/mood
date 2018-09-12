@@ -17,7 +17,7 @@ body {
   display: none;
 }
 
-#first-section {
+.first-section {
   background: #00B4DB;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -74,14 +74,14 @@ body {
   opacity: 0.8;
 }
 
-#user-mood-container {
+.user-mood-container {
   margin: 0 auto;
   margin-top: 3rem;
   width: 25%;
   font-size: 2rem;
 }
 
-#secondary-section {
+.secondary-section {
   background: #f9f6f0;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -199,18 +199,18 @@ a:visited {
   grid-column: 3/4;
 }
 
-#header {
+.header {
   margin: 0 auto;
   margin-top: 10vh;
   text-align: center;
   color: #ffefef;
 }
 
-#main-header {
+.main-header {
   font-size: 4rem;
 }
 
-#mood-lead {
+.mood-lead {
   margin: 0 auto;
   width: 60%;
   margin-bottom: 2rem;
@@ -231,7 +231,7 @@ a:visited {
   transition: .3s;
 }
 
-#enter-mood-picker:hover {
+.enter-mood-picker:hover {
   transition: .3s;
   width: 50%;
   max-width: 260px;
