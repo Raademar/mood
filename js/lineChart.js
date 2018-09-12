@@ -1,5 +1,5 @@
 
-import Chart from '../chart.js';
+import Chart from 'chart.js';
 
 const data = JSON.parse(localStorage.getItem('userentry'));
 let ctx = document.getElementById("myChart");
