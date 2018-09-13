@@ -2,7 +2,7 @@
 import Chart from 'chart.js';
 
 const data = JSON.parse(localStorage.getItem('userentry'));
-let ctx = document.getElementById("myChart");
+let ctx = document.getElementById("lineChart");
 
 let moodArray = [];
 let dateArray = [];
@@ -21,7 +21,7 @@ let myChart = new Chart(ctx, {
       datasets: [{
           label: [],
           data: moodArray,
-          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+          backgroundColor: 'rgba(255, 99, 132, 0.8)',
           borderColor: 'rgba(255,99,132,1)',
           borderWidth: 1
       }]
@@ -29,14 +29,19 @@ let myChart = new Chart(ctx, {
   options: {
       title: {
         display: true,
-        text: 'Your mood'
+        text: 'Line Chart'
+      },
+      legend: {
+          labels: {
+              fontColor: '#000'
+          }
       },
       scales: {
           yAxes: [{
               ticks: {
                   beginAtZero:true
-              }
-          }]
+              },
+          }],
       },
       elements: {
         line: {
