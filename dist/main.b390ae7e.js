@@ -112,7 +112,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.sendUserMood = sendUserMood;
 function sendUserMood(date, usermood, usernote) {
   var request = new XMLHttpRequest();
-  request.open('POST', './db.php', true);
+  request.open('POST', '../db.php', true);
   request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
   request.send(date, usermood, usernote);
 };

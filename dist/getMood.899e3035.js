@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"node_modules\\chart.js\\src\\helpers\\helpers.core.js":[function(require,module,exports) {
+})({"node_modules/chart.js/src/helpers/helpers.core.js":[function(require,module,exports) {
 'use strict';
 
 /**
@@ -444,7 +444,7 @@ helpers.getValueOrDefault = helpers.valueOrDefault;
  */
 helpers.getValueAtIndexOrDefault = helpers.valueAtIndexOrDefault;
 
-},{}],"node_modules\\chart.js\\src\\helpers\\helpers.easing.js":[function(require,module,exports) {
+},{}],"node_modules/chart.js/src/helpers/helpers.easing.js":[function(require,module,exports) {
 'use strict';
 
 var helpers = require('./helpers.core');
@@ -696,7 +696,7 @@ module.exports = {
  */
 helpers.easingEffects = effects;
 
-},{"./helpers.core":"node_modules\\chart.js\\src\\helpers\\helpers.core.js"}],"node_modules\\chart.js\\src\\helpers\\helpers.canvas.js":[function(require,module,exports) {
+},{"./helpers.core":"node_modules/chart.js/src/helpers/helpers.core.js"}],"node_modules/chart.js/src/helpers/helpers.canvas.js":[function(require,module,exports) {
 'use strict';
 
 var helpers = require('./helpers.core');
@@ -912,7 +912,7 @@ helpers.drawRoundedRectangle = function(ctx) {
 	ctx.closePath();
 };
 
-},{"./helpers.core":"node_modules\\chart.js\\src\\helpers\\helpers.core.js"}],"node_modules\\chart.js\\src\\helpers\\helpers.options.js":[function(require,module,exports) {
+},{"./helpers.core":"node_modules/chart.js/src/helpers/helpers.core.js"}],"node_modules/chart.js/src/helpers/helpers.options.js":[function(require,module,exports) {
 'use strict';
 
 var helpers = require('./helpers.core');
@@ -1010,7 +1010,7 @@ module.exports = {
 	}
 };
 
-},{"./helpers.core":"node_modules\\chart.js\\src\\helpers\\helpers.core.js"}],"node_modules\\chart.js\\src\\helpers\\index.js":[function(require,module,exports) {
+},{"./helpers.core":"node_modules/chart.js/src/helpers/helpers.core.js"}],"node_modules/chart.js/src/helpers/index.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = require('./helpers.core');
@@ -1018,7 +1018,7 @@ module.exports.easing = require('./helpers.easing');
 module.exports.canvas = require('./helpers.canvas');
 module.exports.options = require('./helpers.options');
 
-},{"./helpers.core":"node_modules\\chart.js\\src\\helpers\\helpers.core.js","./helpers.easing":"node_modules\\chart.js\\src\\helpers\\helpers.easing.js","./helpers.canvas":"node_modules\\chart.js\\src\\helpers\\helpers.canvas.js","./helpers.options":"node_modules\\chart.js\\src\\helpers\\helpers.options.js"}],"node_modules\\chart.js\\src\\core\\core.defaults.js":[function(require,module,exports) {
+},{"./helpers.core":"node_modules/chart.js/src/helpers/helpers.core.js","./helpers.easing":"node_modules/chart.js/src/helpers/helpers.easing.js","./helpers.canvas":"node_modules/chart.js/src/helpers/helpers.canvas.js","./helpers.options":"node_modules/chart.js/src/helpers/helpers.options.js"}],"node_modules/chart.js/src/core/core.defaults.js":[function(require,module,exports) {
 'use strict';
 
 var helpers = require('../helpers/index');
@@ -1032,7 +1032,7 @@ module.exports = {
 	}
 };
 
-},{"../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\core\\core.js":[function(require,module,exports) {
+},{"../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/core/core.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('./core.defaults');
@@ -1083,7 +1083,7 @@ module.exports = function() {
 	return Chart;
 };
 
-},{"./core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js"}],"node_modules\\chartjs-color\\node_modules\\color-convert\\conversions.js":[function(require,module,exports) {
+},{"./core.defaults":"node_modules/chart.js/src/core/core.defaults.js"}],"node_modules/chartjs-color/node_modules/color-convert/conversions.js":[function(require,module,exports) {
 /* MIT license */
 
 module.exports = {
@@ -1783,7 +1783,7 @@ for (var key in cssKeywords) {
   reverseKeywords[JSON.stringify(cssKeywords[key])] = key;
 }
 
-},{}],"node_modules\\chartjs-color\\node_modules\\color-convert\\index.js":[function(require,module,exports) {
+},{}],"node_modules/chartjs-color/node_modules/color-convert/index.js":[function(require,module,exports) {
 var conversions = require("./conversions");
 
 var convert = function() {
@@ -1876,7 +1876,7 @@ Converter.prototype.getValues = function(space) {
 });
 
 module.exports = convert;
-},{"./conversions":"node_modules\\chartjs-color\\node_modules\\color-convert\\conversions.js"}],"node_modules\\color-name\\index.js":[function(require,module,exports) {
+},{"./conversions":"node_modules/chartjs-color/node_modules/color-convert/conversions.js"}],"node_modules/color-name/index.js":[function(require,module,exports) {
 'use strict'
 
 module.exports = {
@@ -2030,7 +2030,7 @@ module.exports = {
 	"yellowgreen": [154, 205, 50]
 };
 
-},{}],"node_modules\\chartjs-color-string\\color-string.js":[function(require,module,exports) {
+},{}],"node_modules/chartjs-color-string/color-string.js":[function(require,module,exports) {
 /* MIT license */
 var colorNames = require('color-name');
 
@@ -2253,7 +2253,7 @@ for (var name in colorNames) {
    reverseNames[colorNames[name]] = name;
 }
 
-},{"color-name":"node_modules\\color-name\\index.js"}],"node_modules\\chartjs-color\\index.js":[function(require,module,exports) {
+},{"color-name":"node_modules/color-name/index.js"}],"node_modules/chartjs-color/index.js":[function(require,module,exports) {
 /* MIT license */
 var convert = require('color-convert');
 var string = require('chartjs-color-string');
@@ -2740,7 +2740,7 @@ if (typeof window !== 'undefined') {
 
 module.exports = Color;
 
-},{"color-convert":"node_modules\\chartjs-color\\node_modules\\color-convert\\index.js","chartjs-color-string":"node_modules\\chartjs-color-string\\color-string.js"}],"node_modules\\chart.js\\src\\core\\core.helpers.js":[function(require,module,exports) {
+},{"color-convert":"node_modules/chartjs-color/node_modules/color-convert/index.js","chartjs-color-string":"node_modules/chartjs-color-string/color-string.js"}],"node_modules/chart.js/src/core/core.helpers.js":[function(require,module,exports) {
 /* global window: false */
 /* global document: false */
 'use strict';
@@ -3353,7 +3353,7 @@ module.exports = function(Chart) {
 	};
 };
 
-},{"chartjs-color":"node_modules\\chartjs-color\\index.js","./core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\core\\core.element.js":[function(require,module,exports) {
+},{"chartjs-color":"node_modules/chartjs-color/index.js","./core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/core/core.element.js":[function(require,module,exports) {
 'use strict';
 
 var color = require('chartjs-color');
@@ -3470,7 +3470,7 @@ Element.extend = helpers.inherits;
 
 module.exports = Element;
 
-},{"chartjs-color":"node_modules\\chartjs-color\\index.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\elements\\element.arc.js":[function(require,module,exports) {
+},{"chartjs-color":"node_modules/chartjs-color/index.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/elements/element.arc.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -3579,7 +3579,7 @@ module.exports = Element.extend({
 	}
 });
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../core/core.element":"node_modules\\chart.js\\src\\core\\core.element.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\elements\\element.line.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../core/core.element":"node_modules/chart.js/src/core/core.element.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/elements/element.line.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -3672,7 +3672,7 @@ module.exports = Element.extend({
 	}
 });
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../core/core.element":"node_modules\\chart.js\\src\\core\\core.element.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\elements\\element.point.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../core/core.element":"node_modules/chart.js/src/core/core.element.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/elements/element.point.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -3780,7 +3780,7 @@ module.exports = Element.extend({
 	}
 });
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../core/core.element":"node_modules\\chart.js\\src\\core\\core.element.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\elements\\element.rectangle.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../core/core.element":"node_modules/chart.js/src/core/core.element.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/elements/element.rectangle.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -3999,7 +3999,7 @@ module.exports = Element.extend({
 	}
 });
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../core/core.element":"node_modules\\chart.js\\src\\core\\core.element.js"}],"node_modules\\chart.js\\src\\elements\\index.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../core/core.element":"node_modules/chart.js/src/core/core.element.js"}],"node_modules/chart.js/src/elements/index.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = {};
@@ -4008,7 +4008,7 @@ module.exports.Line = require('./element.line');
 module.exports.Point = require('./element.point');
 module.exports.Rectangle = require('./element.rectangle');
 
-},{"./element.arc":"node_modules\\chart.js\\src\\elements\\element.arc.js","./element.line":"node_modules\\chart.js\\src\\elements\\element.line.js","./element.point":"node_modules\\chart.js\\src\\elements\\element.point.js","./element.rectangle":"node_modules\\chart.js\\src\\elements\\element.rectangle.js"}],"node_modules\\chart.js\\src\\core\\core.interaction.js":[function(require,module,exports) {
+},{"./element.arc":"node_modules/chart.js/src/elements/element.arc.js","./element.line":"node_modules/chart.js/src/elements/element.line.js","./element.point":"node_modules/chart.js/src/elements/element.point.js","./element.rectangle":"node_modules/chart.js/src/elements/element.rectangle.js"}],"node_modules/chart.js/src/core/core.interaction.js":[function(require,module,exports) {
 'use strict';
 
 var helpers = require('../helpers/index');
@@ -4340,7 +4340,7 @@ module.exports = {
 	}
 };
 
-},{"../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\core\\core.layouts.js":[function(require,module,exports) {
+},{"../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/core/core.layouts.js":[function(require,module,exports) {
 'use strict';
 
 var helpers = require('../helpers/index');
@@ -4761,7 +4761,7 @@ module.exports = {
 	}
 };
 
-},{"../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\platforms\\platform.basic.js":[function(require,module,exports) {
+},{"../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/platforms/platform.basic.js":[function(require,module,exports) {
 /**
  * Platform fallback implementation (minimal).
  * @see https://github.com/chartjs/Chart.js/pull/4591#issuecomment-319575939
@@ -4778,7 +4778,7 @@ module.exports = {
 	}
 };
 
-},{}],"node_modules\\chart.js\\src\\platforms\\platform.dom.js":[function(require,module,exports) {
+},{}],"node_modules/chart.js/src/platforms/platform.dom.js":[function(require,module,exports) {
 /**
  * Chart.Platform implementation for targeting a web browser
  */
@@ -5237,7 +5237,7 @@ helpers.addEvent = addEventListener;
  */
 helpers.removeEvent = removeEventListener;
 
-},{"../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\platforms\\platform.js":[function(require,module,exports) {
+},{"../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/platforms/platform.js":[function(require,module,exports) {
 'use strict';
 
 var helpers = require('../helpers/index');
@@ -5313,7 +5313,7 @@ module.exports = helpers.extend({
  * @prop {Number} y - The mouse y position, relative to the canvas (null for incompatible events)
  */
 
-},{"../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js","./platform.basic":"node_modules\\chart.js\\src\\platforms\\platform.basic.js","./platform.dom":"node_modules\\chart.js\\src\\platforms\\platform.dom.js"}],"node_modules\\chart.js\\src\\core\\core.plugins.js":[function(require,module,exports) {
+},{"../helpers/index":"node_modules/chart.js/src/helpers/index.js","./platform.basic":"node_modules/chart.js/src/platforms/platform.basic.js","./platform.dom":"node_modules/chart.js/src/platforms/platform.dom.js"}],"node_modules/chart.js/src/core/core.plugins.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('./core.defaults');
@@ -5697,7 +5697,7 @@ module.exports = {
  * @param {Object} options - The plugin options.
  */
 
-},{"./core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\core\\core.ticks.js":[function(require,module,exports) {
+},{"./core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/core/core.ticks.js":[function(require,module,exports) {
 'use strict';
 
 var helpers = require('../helpers/index');
@@ -5769,7 +5769,7 @@ module.exports = {
 	}
 };
 
-},{"../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\core\\core.animation.js":[function(require,module,exports) {
+},{"../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/core/core.animation.js":[function(require,module,exports) {
 /* global window: false */
 'use strict';
 
@@ -5943,7 +5943,7 @@ module.exports = function(Chart) {
 
 };
 
-},{"./core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","./core.element":"node_modules\\chart.js\\src\\core\\core.element.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\core\\core.controller.js":[function(require,module,exports) {
+},{"./core.defaults":"node_modules/chart.js/src/core/core.defaults.js","./core.element":"node_modules/chart.js/src/core/core.element.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/core/core.controller.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('./core.defaults');
@@ -6892,7 +6892,7 @@ module.exports = function(Chart) {
 	Chart.Controller = Chart;
 };
 
-},{"./core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js","./core.interaction":"node_modules\\chart.js\\src\\core\\core.interaction.js","./core.layouts":"node_modules\\chart.js\\src\\core\\core.layouts.js","../platforms/platform":"node_modules\\chart.js\\src\\platforms\\platform.js","./core.plugins":"node_modules\\chart.js\\src\\core\\core.plugins.js"}],"node_modules\\chart.js\\src\\core\\core.datasetController.js":[function(require,module,exports) {
+},{"./core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js","./core.interaction":"node_modules/chart.js/src/core/core.interaction.js","./core.layouts":"node_modules/chart.js/src/core/core.layouts.js","../platforms/platform":"node_modules/chart.js/src/platforms/platform.js","./core.plugins":"node_modules/chart.js/src/core/core.plugins.js"}],"node_modules/chart.js/src/core/core.datasetController.js":[function(require,module,exports) {
 'use strict';
 
 var helpers = require('../helpers/index');
@@ -7224,7 +7224,7 @@ module.exports = function(Chart) {
 	Chart.DatasetController.extend = helpers.inherits;
 };
 
-},{"../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\core\\core.scaleService.js":[function(require,module,exports) {
+},{"../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/core/core.scaleService.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('./core.defaults');
@@ -7272,7 +7272,7 @@ module.exports = function(Chart) {
 	};
 };
 
-},{"./core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js","./core.layouts":"node_modules\\chart.js\\src\\core\\core.layouts.js"}],"node_modules\\chart.js\\src\\core\\core.scale.js":[function(require,module,exports) {
+},{"./core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js","./core.layouts":"node_modules/chart.js/src/core/core.layouts.js"}],"node_modules/chart.js/src/core/core.scale.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('./core.defaults');
@@ -8210,7 +8210,7 @@ module.exports = function(Chart) {
 	});
 };
 
-},{"./core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","./core.element":"node_modules\\chart.js\\src\\core\\core.element.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js","./core.ticks":"node_modules\\chart.js\\src\\core\\core.ticks.js"}],"node_modules\\chart.js\\src\\core\\core.tooltip.js":[function(require,module,exports) {
+},{"./core.defaults":"node_modules/chart.js/src/core/core.defaults.js","./core.element":"node_modules/chart.js/src/core/core.element.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js","./core.ticks":"node_modules/chart.js/src/core/core.ticks.js"}],"node_modules/chart.js/src/core/core.tooltip.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('./core.defaults');
@@ -9160,7 +9160,7 @@ module.exports = function(Chart) {
 	};
 };
 
-},{"./core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","./core.element":"node_modules\\chart.js\\src\\core\\core.element.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\scales\\scale.linearbase.js":[function(require,module,exports) {
+},{"./core.defaults":"node_modules/chart.js/src/core/core.defaults.js","./core.element":"node_modules/chart.js/src/core/core.element.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/scales/scale.linearbase.js":[function(require,module,exports) {
 'use strict';
 
 var helpers = require('../helpers/index');
@@ -9348,7 +9348,7 @@ module.exports = function(Chart) {
 	});
 };
 
-},{"../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\scales\\scale.category.js":[function(require,module,exports) {
+},{"../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/scales/scale.category.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function(Chart) {
@@ -9483,7 +9483,7 @@ module.exports = function(Chart) {
 
 };
 
-},{}],"node_modules\\chart.js\\src\\scales\\scale.linear.js":[function(require,module,exports) {
+},{}],"node_modules/chart.js/src/scales/scale.linear.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -9676,7 +9676,7 @@ module.exports = function(Chart) {
 
 };
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js","../core/core.ticks":"node_modules\\chart.js\\src\\core\\core.ticks.js"}],"node_modules\\chart.js\\src\\scales\\scale.logarithmic.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js","../core/core.ticks":"node_modules/chart.js/src/core/core.ticks.js"}],"node_modules/chart.js/src/scales/scale.logarithmic.js":[function(require,module,exports) {
 'use strict';
 
 var helpers = require('../helpers/index');
@@ -10025,7 +10025,7 @@ module.exports = function(Chart) {
 
 };
 
-},{"../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js","../core/core.ticks":"node_modules\\chart.js\\src\\core\\core.ticks.js"}],"node_modules\\chart.js\\src\\scales\\scale.radialLinear.js":[function(require,module,exports) {
+},{"../helpers/index":"node_modules/chart.js/src/helpers/index.js","../core/core.ticks":"node_modules/chart.js/src/core/core.ticks.js"}],"node_modules/chart.js/src/scales/scale.radialLinear.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -10556,7 +10556,7 @@ module.exports = function(Chart) {
 
 };
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js","../core/core.ticks":"node_modules\\chart.js\\src\\core\\core.ticks.js"}],"node_modules\\moment\\moment.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js","../core/core.ticks":"node_modules/chart.js/src/core/core.ticks.js"}],"node_modules/moment/moment.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 //! moment.js
@@ -15066,7 +15066,7 @@ var global = arguments[3];
 
 })));
 
-},{}],"node_modules\\chart.js\\src\\scales\\scale.time.js":[function(require,module,exports) {
+},{}],"node_modules/chart.js/src/scales/scale.time.js":[function(require,module,exports) {
 /* global window: false */
 'use strict';
 
@@ -15851,7 +15851,7 @@ module.exports = function(Chart) {
 	Chart.scaleService.registerScaleType('time', TimeScale, defaultConfig);
 };
 
-},{"moment":"node_modules\\moment\\moment.js","../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\controllers\\controller.bar.js":[function(require,module,exports) {
+},{"moment":"node_modules/moment/moment.js","../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/controllers/controller.bar.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -16357,7 +16357,7 @@ module.exports = function(Chart) {
 	});
 };
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../elements/index":"node_modules\\chart.js\\src\\elements\\index.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\controllers\\controller.bubble.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../elements/index":"node_modules/chart.js/src/elements/index.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/controllers/controller.bubble.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -16539,7 +16539,7 @@ module.exports = function(Chart) {
 	});
 };
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../elements/index":"node_modules\\chart.js\\src\\elements\\index.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\controllers\\controller.doughnut.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../elements/index":"node_modules/chart.js/src/elements/index.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/controllers/controller.doughnut.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -16840,7 +16840,7 @@ module.exports = function(Chart) {
 	});
 };
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../elements/index":"node_modules\\chart.js\\src\\elements\\index.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\controllers\\controller.line.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../elements/index":"node_modules/chart.js/src/elements/index.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/controllers/controller.line.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -17175,7 +17175,7 @@ module.exports = function(Chart) {
 	});
 };
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../elements/index":"node_modules\\chart.js\\src\\elements\\index.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\controllers\\controller.polarArea.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../elements/index":"node_modules/chart.js/src/elements/index.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/controllers/controller.polarArea.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -17399,7 +17399,7 @@ module.exports = function(Chart) {
 	});
 };
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../elements/index":"node_modules\\chart.js\\src\\elements\\index.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\controllers\\controller.radar.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../elements/index":"node_modules/chart.js/src/elements/index.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/controllers/controller.radar.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -17569,7 +17569,7 @@ module.exports = function(Chart) {
 	});
 };
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../elements/index":"node_modules\\chart.js\\src\\elements\\index.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\controllers\\controller.scatter.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../elements/index":"node_modules/chart.js/src/elements/index.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/controllers/controller.scatter.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -17613,7 +17613,7 @@ module.exports = function(Chart) {
 
 };
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js"}],"node_modules\\chart.js\\src\\charts\\Chart.Bar.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js"}],"node_modules/chart.js/src/charts/Chart.Bar.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function(Chart) {
@@ -17626,7 +17626,7 @@ module.exports = function(Chart) {
 
 };
 
-},{}],"node_modules\\chart.js\\src\\charts\\Chart.Bubble.js":[function(require,module,exports) {
+},{}],"node_modules/chart.js/src/charts/Chart.Bubble.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function(Chart) {
@@ -17638,7 +17638,7 @@ module.exports = function(Chart) {
 
 };
 
-},{}],"node_modules\\chart.js\\src\\charts\\Chart.Doughnut.js":[function(require,module,exports) {
+},{}],"node_modules/chart.js/src/charts/Chart.Doughnut.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function(Chart) {
@@ -17651,7 +17651,7 @@ module.exports = function(Chart) {
 
 };
 
-},{}],"node_modules\\chart.js\\src\\charts\\Chart.Line.js":[function(require,module,exports) {
+},{}],"node_modules/chart.js/src/charts/Chart.Line.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function(Chart) {
@@ -17664,7 +17664,7 @@ module.exports = function(Chart) {
 
 };
 
-},{}],"node_modules\\chart.js\\src\\charts\\Chart.PolarArea.js":[function(require,module,exports) {
+},{}],"node_modules/chart.js/src/charts/Chart.PolarArea.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function(Chart) {
@@ -17677,7 +17677,7 @@ module.exports = function(Chart) {
 
 };
 
-},{}],"node_modules\\chart.js\\src\\charts\\Chart.Radar.js":[function(require,module,exports) {
+},{}],"node_modules/chart.js/src/charts/Chart.Radar.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function(Chart) {
@@ -17690,7 +17690,7 @@ module.exports = function(Chart) {
 
 };
 
-},{}],"node_modules\\chart.js\\src\\charts\\Chart.Scatter.js":[function(require,module,exports) {
+},{}],"node_modules/chart.js/src/charts/Chart.Scatter.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function(Chart) {
@@ -17700,7 +17700,7 @@ module.exports = function(Chart) {
 	};
 };
 
-},{}],"node_modules\\chart.js\\src\\plugins\\plugin.filler.js":[function(require,module,exports) {
+},{}],"node_modules/chart.js/src/plugins/plugin.filler.js":[function(require,module,exports) {
 /**
  * Plugin based on discussion from the following Chart.js issues:
  * @see https://github.com/chartjs/Chart.js/issues/2380#issuecomment-279961569
@@ -18020,7 +18020,7 @@ module.exports = {
 	}
 };
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../elements/index":"node_modules\\chart.js\\src\\elements\\index.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js"}],"node_modules\\chart.js\\src\\plugins\\plugin.legend.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../elements/index":"node_modules/chart.js/src/elements/index.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js"}],"node_modules/chart.js/src/plugins/plugin.legend.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -18598,7 +18598,7 @@ module.exports = {
 	}
 };
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../core/core.element":"node_modules\\chart.js\\src\\core\\core.element.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js","../core/core.layouts":"node_modules\\chart.js\\src\\core\\core.layouts.js"}],"node_modules\\chart.js\\src\\plugins\\plugin.title.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../core/core.element":"node_modules/chart.js/src/core/core.element.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js","../core/core.layouts":"node_modules/chart.js/src/core/core.layouts.js"}],"node_modules/chart.js/src/plugins/plugin.title.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('../core/core.defaults');
@@ -18852,7 +18852,7 @@ module.exports = {
 	}
 };
 
-},{"../core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","../core/core.element":"node_modules\\chart.js\\src\\core\\core.element.js","../helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js","../core/core.layouts":"node_modules\\chart.js\\src\\core\\core.layouts.js"}],"node_modules\\chart.js\\src\\plugins\\index.js":[function(require,module,exports) {
+},{"../core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","../core/core.element":"node_modules/chart.js/src/core/core.element.js","../helpers/index":"node_modules/chart.js/src/helpers/index.js","../core/core.layouts":"node_modules/chart.js/src/core/core.layouts.js"}],"node_modules/chart.js/src/plugins/index.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = {};
@@ -18860,7 +18860,7 @@ module.exports.filler = require('./plugin.filler');
 module.exports.legend = require('./plugin.legend');
 module.exports.title = require('./plugin.title');
 
-},{"./plugin.filler":"node_modules\\chart.js\\src\\plugins\\plugin.filler.js","./plugin.legend":"node_modules\\chart.js\\src\\plugins\\plugin.legend.js","./plugin.title":"node_modules\\chart.js\\src\\plugins\\plugin.title.js"}],"node_modules\\chart.js\\src\\chart.js":[function(require,module,exports) {
+},{"./plugin.filler":"node_modules/chart.js/src/plugins/plugin.filler.js","./plugin.legend":"node_modules/chart.js/src/plugins/plugin.legend.js","./plugin.title":"node_modules/chart.js/src/plugins/plugin.title.js"}],"node_modules/chart.js/src/chart.js":[function(require,module,exports) {
 /**
  * @namespace Chart
  */
@@ -18984,7 +18984,7 @@ Chart.canvasHelpers = Chart.helpers.canvas;
  */
 Chart.layoutService = Chart.layouts;
 
-},{"./core/core":"node_modules\\chart.js\\src\\core\\core.js","./helpers/index":"node_modules\\chart.js\\src\\helpers\\index.js","./core/core.helpers":"node_modules\\chart.js\\src\\core\\core.helpers.js","./core/core.defaults":"node_modules\\chart.js\\src\\core\\core.defaults.js","./core/core.element":"node_modules\\chart.js\\src\\core\\core.element.js","./elements/index":"node_modules\\chart.js\\src\\elements\\index.js","./core/core.interaction":"node_modules\\chart.js\\src\\core\\core.interaction.js","./core/core.layouts":"node_modules\\chart.js\\src\\core\\core.layouts.js","./platforms/platform":"node_modules\\chart.js\\src\\platforms\\platform.js","./core/core.plugins":"node_modules\\chart.js\\src\\core\\core.plugins.js","./core/core.ticks":"node_modules\\chart.js\\src\\core\\core.ticks.js","./core/core.animation":"node_modules\\chart.js\\src\\core\\core.animation.js","./core/core.controller":"node_modules\\chart.js\\src\\core\\core.controller.js","./core/core.datasetController":"node_modules\\chart.js\\src\\core\\core.datasetController.js","./core/core.scaleService":"node_modules\\chart.js\\src\\core\\core.scaleService.js","./core/core.scale":"node_modules\\chart.js\\src\\core\\core.scale.js","./core/core.tooltip":"node_modules\\chart.js\\src\\core\\core.tooltip.js","./scales/scale.linearbase":"node_modules\\chart.js\\src\\scales\\scale.linearbase.js","./scales/scale.category":"node_modules\\chart.js\\src\\scales\\scale.category.js","./scales/scale.linear":"node_modules\\chart.js\\src\\scales\\scale.linear.js","./scales/scale.logarithmic":"node_modules\\chart.js\\src\\scales\\scale.logarithmic.js","./scales/scale.radialLinear":"node_modules\\chart.js\\src\\scales\\scale.radialLinear.js","./scales/scale.time":"node_modules\\chart.js\\src\\scales\\scale.time.js","./controllers/controller.bar":"node_modules\\chart.js\\src\\controllers\\controller.bar.js","./controllers/controller.bubble":"node_modules\\chart.js\\src\\controllers\\controller.bubble.js","./controllers/controller.doughnut":"node_modules\\chart.js\\src\\controllers\\controller.doughnut.js","./controllers/controller.line":"node_modules\\chart.js\\src\\controllers\\controller.line.js","./controllers/controller.polarArea":"node_modules\\chart.js\\src\\controllers\\controller.polarArea.js","./controllers/controller.radar":"node_modules\\chart.js\\src\\controllers\\controller.radar.js","./controllers/controller.scatter":"node_modules\\chart.js\\src\\controllers\\controller.scatter.js","./charts/Chart.Bar":"node_modules\\chart.js\\src\\charts\\Chart.Bar.js","./charts/Chart.Bubble":"node_modules\\chart.js\\src\\charts\\Chart.Bubble.js","./charts/Chart.Doughnut":"node_modules\\chart.js\\src\\charts\\Chart.Doughnut.js","./charts/Chart.Line":"node_modules\\chart.js\\src\\charts\\Chart.Line.js","./charts/Chart.PolarArea":"node_modules\\chart.js\\src\\charts\\Chart.PolarArea.js","./charts/Chart.Radar":"node_modules\\chart.js\\src\\charts\\Chart.Radar.js","./charts/Chart.Scatter":"node_modules\\chart.js\\src\\charts\\Chart.Scatter.js","./plugins":"node_modules\\chart.js\\src\\plugins\\index.js"}],"js\\lineChart.js":[function(require,module,exports) {
+},{"./core/core":"node_modules/chart.js/src/core/core.js","./helpers/index":"node_modules/chart.js/src/helpers/index.js","./core/core.helpers":"node_modules/chart.js/src/core/core.helpers.js","./core/core.defaults":"node_modules/chart.js/src/core/core.defaults.js","./core/core.element":"node_modules/chart.js/src/core/core.element.js","./elements/index":"node_modules/chart.js/src/elements/index.js","./core/core.interaction":"node_modules/chart.js/src/core/core.interaction.js","./core/core.layouts":"node_modules/chart.js/src/core/core.layouts.js","./platforms/platform":"node_modules/chart.js/src/platforms/platform.js","./core/core.plugins":"node_modules/chart.js/src/core/core.plugins.js","./core/core.ticks":"node_modules/chart.js/src/core/core.ticks.js","./core/core.animation":"node_modules/chart.js/src/core/core.animation.js","./core/core.controller":"node_modules/chart.js/src/core/core.controller.js","./core/core.datasetController":"node_modules/chart.js/src/core/core.datasetController.js","./core/core.scaleService":"node_modules/chart.js/src/core/core.scaleService.js","./core/core.scale":"node_modules/chart.js/src/core/core.scale.js","./core/core.tooltip":"node_modules/chart.js/src/core/core.tooltip.js","./scales/scale.linearbase":"node_modules/chart.js/src/scales/scale.linearbase.js","./scales/scale.category":"node_modules/chart.js/src/scales/scale.category.js","./scales/scale.linear":"node_modules/chart.js/src/scales/scale.linear.js","./scales/scale.logarithmic":"node_modules/chart.js/src/scales/scale.logarithmic.js","./scales/scale.radialLinear":"node_modules/chart.js/src/scales/scale.radialLinear.js","./scales/scale.time":"node_modules/chart.js/src/scales/scale.time.js","./controllers/controller.bar":"node_modules/chart.js/src/controllers/controller.bar.js","./controllers/controller.bubble":"node_modules/chart.js/src/controllers/controller.bubble.js","./controllers/controller.doughnut":"node_modules/chart.js/src/controllers/controller.doughnut.js","./controllers/controller.line":"node_modules/chart.js/src/controllers/controller.line.js","./controllers/controller.polarArea":"node_modules/chart.js/src/controllers/controller.polarArea.js","./controllers/controller.radar":"node_modules/chart.js/src/controllers/controller.radar.js","./controllers/controller.scatter":"node_modules/chart.js/src/controllers/controller.scatter.js","./charts/Chart.Bar":"node_modules/chart.js/src/charts/Chart.Bar.js","./charts/Chart.Bubble":"node_modules/chart.js/src/charts/Chart.Bubble.js","./charts/Chart.Doughnut":"node_modules/chart.js/src/charts/Chart.Doughnut.js","./charts/Chart.Line":"node_modules/chart.js/src/charts/Chart.Line.js","./charts/Chart.PolarArea":"node_modules/chart.js/src/charts/Chart.PolarArea.js","./charts/Chart.Radar":"node_modules/chart.js/src/charts/Chart.Radar.js","./charts/Chart.Scatter":"node_modules/chart.js/src/charts/Chart.Scatter.js","./plugins":"node_modules/chart.js/src/plugins/index.js"}],"js/lineChart.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18999,7 +18999,7 @@ var _chart2 = _interopRequireDefault(_chart);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var data = JSON.parse(localStorage.getItem('userentry'));
-var ctx = document.getElementById("myChart");
+var ctx = document.getElementById("lineChart");
 
 var moodArray = [];
 var dateArray = [];
@@ -19018,7 +19018,7 @@ var myChart = new _chart2.default(ctx, {
         datasets: [{
             label: [],
             data: moodArray,
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            backgroundColor: 'rgba(255, 99, 132, 0.8)',
             borderColor: 'rgba(255,99,132,1)',
             borderWidth: 1
         }]
@@ -19026,7 +19026,12 @@ var myChart = new _chart2.default(ctx, {
     options: {
         title: {
             display: true,
-            text: 'Your mood'
+            text: 'Line Chart'
+        },
+        legend: {
+            labels: {
+                fontColor: '#fff'
+            }
         },
         scales: {
             yAxes: [{
@@ -19044,7 +19049,7 @@ var myChart = new _chart2.default(ctx, {
 });
 
 function myChart() {};
-},{"chart.js":"node_modules\\chart.js\\src\\chart.js"}],"js\\pieChart.js":[function(require,module,exports) {
+},{"chart.js":"node_modules/chart.js/src/chart.js"}],"js/pieChart.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19108,7 +19113,7 @@ var pieChart = new _chart2.default(ctx, {
 });
 
 function pieChart() {};
-},{"chart.js":"node_modules\\chart.js\\src\\chart.js"}],"js\\getMood.js":[function(require,module,exports) {
+},{"chart.js":"node_modules/chart.js/src/chart.js"}],"js/getMood.js":[function(require,module,exports) {
 'use strict';
 
 var _lineChart = require('./lineChart');
@@ -19120,7 +19125,7 @@ var _pieChart = require('./pieChart');
 var _pieChart2 = _interopRequireDefault(_pieChart);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./lineChart":"js\\lineChart.js","./pieChart":"js\\pieChart.js"}],"node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
+},{"./lineChart":"js/lineChart.js","./pieChart":"js/pieChart.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -19149,7 +19154,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '62444' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52456' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -19290,5 +19295,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js","js\\getMood.js"], null)
-//# sourceMappingURL=/getMood.2911e5c4.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/getMood.js"], null)
+//# sourceMappingURL=/getMood.899e3035.map
