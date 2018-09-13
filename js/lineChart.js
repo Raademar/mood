@@ -33,7 +33,7 @@ let myChart = new Chart(ctx, {
       },
       legend: {
           labels: {
-              fontColor: '#000'
+              fontColor: '#fff'
           }
       },
       scales: {

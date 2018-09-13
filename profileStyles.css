@@ -1,3 +1,6 @@
+body {
+  background: linear-gradient(to right, #EC7357, #FCDC4D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .profile-first-section {
   margin: 1rem;
 }
@@ -6,14 +9,19 @@
   height: 45vh;
   position: relative;
   display: inline-block;
+  box-shadow: 0 1px 6px -2px black;
   }
 .pieChartContainer {
   width: 45vw;
   height: 45vh;
   position: relative;
   display: inline-block;
+  box-shadow: 0 1px 6px -2px black;
   }
 
+.pieChartContainer:hover, .lineChartContainer:hover{
+  box-shadow: 0 2px 8px -2px black;
+}
 .profile-h1 {
   font-size: 2.5rem;
   background: -webkit-linear-gradient(#0083B0, #00B4DB);

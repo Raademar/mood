@@ -51,7 +51,7 @@ let pieChart = new Chart(ctx, {
       },
       elements: {
         line: {
-            tension: 1, // disables bezier curves
+            tension: 0, // disables bezier curves
         }
     }
   }

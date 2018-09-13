@@ -19030,7 +19030,7 @@ var myChart = new _chart2.default(ctx, {
         },
         legend: {
             labels: {
-                fontColor: '#000'
+                fontColor: '#fff'
             }
         },
         scales: {
@@ -19106,7 +19106,7 @@ var pieChart = new _chart2.default(ctx, {
     scales: {},
     elements: {
       line: {
-        tension: 1 // disables bezier curves
+        tension: 0 // disables bezier curves
       }
     }
   }
