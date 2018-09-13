@@ -18999,7 +18999,7 @@ var _chart2 = _interopRequireDefault(_chart);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var data = JSON.parse(localStorage.getItem('userentry'));
-var ctx = document.getElementById("myChart");
+var ctx = document.getElementById("lineChart");
 
 var moodArray = [];
 var dateArray = [];
@@ -19018,7 +19018,7 @@ var myChart = new _chart2.default(ctx, {
         datasets: [{
             label: [],
             data: moodArray,
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            backgroundColor: 'rgba(255, 99, 132, 0.8)',
             borderColor: 'rgba(255,99,132,1)',
             borderWidth: 1
         }]
@@ -19026,7 +19026,12 @@ var myChart = new _chart2.default(ctx, {
     options: {
         title: {
             display: true,
-            text: 'Your mood'
+            text: 'Line Chart'
+        },
+        legend: {
+            labels: {
+                fontColor: '#fff'
+            }
         },
         scales: {
             yAxes: [{
@@ -19086,8 +19091,8 @@ var pieChart = new _chart2.default(ctx, {
       label: [],
       data: moodArray,
       backgroundColor: ['rgba(6, 146, 6, 1)', 'rgba(100, 255, 100, 1)', 'rgba(255, 255, 0, 1)', 'rgba(255, 135, 15, 1)', 'rgba(225, 11, 11, 1)'],
-      borderColor: 'white',
-      borderWidth: 5
+      borderColor: '#aaaaaa',
+      borderWidth: 2
     }]
   },
   options: {
@@ -19149,7 +19154,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '62444' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51400' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 

@@ -1,0 +1,5 @@
+--silly
+--full-trace
+--timeout 20000
+test/finding_test.js
+test/saving_test.js

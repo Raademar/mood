@@ -103,127 +103,73 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"js\\dbAjax.js":[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.sendUserMood = sendUserMood;
-function sendUserMood(date, usermood, usernote) {
-  var request = new XMLHttpRequest();
-  request.open('POST', '../db.php', true);
-  request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-  request.send(date, usermood, usernote);
-};
-},{}],"main.js":[function(require,module,exports) {
-"use strict";
-
-var _dbAjax = require('./js/dbAjax');
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-// Query Selectors
-var smileys = [].concat(_toConsumableArray(document.querySelectorAll('.smiley')));
-var feelingsTextArea = document.querySelector('#text-area-feelings');
-var shareFeelings = document.querySelector('#enter-mood-picker');
-var moodLeadText = document.querySelector('#mood-lead');
-var userMoodContainer = document.querySelector('#user-mood-container');
-var userMoodSpan = document.querySelector('#user-mood');
-var moodNoteTextarea = document.querySelector('#mood-note');
-var submitFeeligns = document.querySelector('#submit-feelings');
-
-// Function for toggling the modal >>> MOVE MODAL HERE <<<
-function enterFeelings(e) {
-  e.preventDefault();
-  setInterval(function () {
-    smileys.forEach(function (item) {
-      item.classList.remove('hide'), item.classList.add('fadeInLeft');
-    });
-    feelingsTextArea.classList.remove('hide');
-    feelingsTextArea.classList.add('fadeInLeft');
-    userMoodContainer.classList.remove('hide');
-  }, 200);
-};
-
-// Current date generator.
-var curDate = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
-
-// Function for assigning the users submitted mood to local storage
-function setLocalStorage(userMoodEntry, userMoodNote) {
-  var userMoodObj = {
-    'date': curDate,
-    'usermood': userMoodEntry,
-    'note': userMoodNote
-  };
-  var userMoodArray = JSON.parse(localStorage.getItem('userentry')) || [];
-  userMoodArray.push(userMoodObj);
-  localStorage.setItem('userentry', JSON.stringify(userMoodArray));
-};
-
-var pickedMood = 0;
-var moodNote = '';
-var userMood = [];
-
-// Get the median mood value from the userMood array.
-var userMedianMood = function userMedianMood(arr) {
-  return arr.reduce(function (a, b) {
-    return a + b;
-  }, 0) / userMood.length;
-};
-
-shareFeelings.addEventListener('click', enterFeelings);
-
-// Assign clickListener for each smiley.
-smileys.forEach(function (smiley) {
-  return smiley.addEventListener('click', function () {
-    smileys.forEach(function (item) {
-      return item.classList.remove('pickedMood');
-    });
-    event.currentTarget.classList.add('pickedMood');
-    pickedMood = parseInt(smiley.dataset.mood);
-  });
-});
-
-// Submit feelings click listener, toggling the modals after submitted and saved in local storage.
-submitFeeligns.addEventListener('click', function () {
-  moodNote = JSON.stringify(moodNoteTextarea.value);
-  setLocalStorage(pickedMood, moodNote);
-  moodNoteTextarea.value = '';
-  pickedMood = 0;
-  toggleModal();
-  toggleSuccessMessage();
-  //sendUserMood(curDate, pickedMood, moodNote); DEVELOP THIS FURTHER ON
-  setTimeout(function () {
-    toggleSuccessMessage();
-  }, 3000);
-});
-
-// Query Selectors for the modals.
-var modal = document.querySelector('.modal');
-var trigger = document.querySelector('.trigger');
-var closeButton = document.querySelector('.close-button');
-var successModal = document.querySelector('.success-modal');
-
-// Functions for toggling the modals.
-function toggleModal() {
-  modal.classList.toggle('show-modal');
-}
-
-function toggleSuccessMessage() {
-  successModal.classList.toggle('show-modal-success');
-}
-
-function windowOnClick(event) {
-  if (event.target === modal) {
-    toggleModal();
+})({"node_modules\\parcel-bundler\\src\\builtins\\bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
   }
+
+  return bundleURL;
 }
 
-trigger.addEventListener('click', toggleModal);
-closeButton.addEventListener('click', toggleModal);
-window.addEventListener('click', windowOnClick);
-},{"./js/dbAjax":"js\\dbAjax.js"}],"node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"node_modules\\parcel-bundler\\src\\builtins\\css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+  newLink.onload = function () {
+    link.remove();
+  };
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"node_modules\\parcel-bundler\\src\\builtins\\bundle-url.js"}],"profileStyles.css":[function(require,module,exports) {
+
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules\\parcel-bundler\\src\\builtins\\css-loader.js"}],"node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -393,5 +339,4 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js","main.js"], null)
-//# sourceMappingURL=/main.b390ae7e.map
+},{}]},{},["node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js"], null)

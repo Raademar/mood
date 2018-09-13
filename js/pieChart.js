@@ -35,8 +35,8 @@ let pieChart = new Chart(ctx, {
             'rgba(255, 135, 15, 1)', 
             'rgba(225, 11, 11, 1)',
           ],
-          borderColor: 'white', 
-          borderWidth: 5,
+          borderColor: '#aaaaaa', 
+          borderWidth: 2,
       }]
   },
   options: {
