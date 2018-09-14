@@ -15,7 +15,6 @@ const insertDocuments = function(db, callback){
     callback(result);
   });
 }
-
 const findDocuments = function(db, callback){
     // Get the userentries collection.
   const collection = db.collection('userentries');
@@ -27,7 +26,6 @@ const findDocuments = function(db, callback){
     callback(docs);
   });
 }
-
 const updateDocuments = function(db, callback){
   // Get the userentries collection.
   const collection = db.collection('userentries');
@@ -40,7 +38,6 @@ const updateDocuments = function(db, callback){
     callback(result);
   });
 }
-
 const removeDocument = function(db, callback) {
   // Get the documents collection
   const collection = db.collection('documents');
@@ -52,7 +49,6 @@ const removeDocument = function(db, callback) {
     callback(result);
   });    
 }
-
 const indexCollection = function(db, callback){
   db.collection('userentries').createIndex(
     { 'a': 1 },
@@ -64,19 +60,20 @@ const indexCollection = function(db, callback){
   );
 };
 
-(async function(){
+let db;
 
-const url = 'mongodb://localhost:27017/mood';
-const dbName = 'mood';
-let client;
+export const loadDB = async () => {
+  if (db) {
+    return db;
+  }
+  try {
+    const client = await MongoClient.connect('mongodb://localhost:27017/mood');
+    db = client.db('mood');
 
-try {
-  client = await MongoClient.connect(url)
-  const db = client.db(dbName);
+  /* const col = db.collection('find');
 
-  let r = await db.collection('userentries').insertOne({mood: 6, note: 'Hejsan kompis'});
-  assert.equal(1, r.insertedCount);
-
+  const entries = await col.find({mood: 2}).limit(2).toArray();
+  assert.equal(2, entries.length); */
 
   // assert.equal(null, err);
   // console.log('Connection was successfull to the server!');
@@ -89,12 +86,11 @@ try {
   //     });
   //   //});
   // //});
+  console.log('Connection successfull!');
+  } catch (err) {
+    console.log(err.stack)
+  }
+  return db;
+};
 
-} catch (err) {
-  console.log(err.stack)
-}
-if (client) {
-  console.log('Connection successfull!')
-  client.close();
-}
-})();
+module.exports = loadDB;

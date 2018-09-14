@@ -1,5 +1,8 @@
 "use strict";
 
+const loadDB = require('./db/connection');
+const db = loadDB();
+
 import {sendUserMood} from './js/dbAjax';
 
 // Query Selectors
@@ -8,7 +11,6 @@ const feelingsTextArea = document.querySelector('#text-area-feelings')
 const shareFeelings = document.querySelector('#enter-mood-picker');
 const moodLeadText = document.querySelector('#mood-lead');
 const userMoodContainer = document.querySelector('#user-mood-container');
-const userMoodSpan = document.querySelector('#user-mood');
 const moodNoteTextarea = document.querySelector('#mood-note');
 const submitFeeligns = document.querySelector('#submit-feelings');
 
@@ -41,6 +43,11 @@ function setLocalStorage(userMoodEntry, userMoodNote){
   localStorage.setItem('userentry', JSON.stringify(userMoodArray));
 };
 
+async function insertIntoDB(userMoodEntry, userMoodNote){
+  const r = await db.collection('userentries').insertOne({date: curDate ,mood: userMoodEntry, note: userMoodNote});
+  assert.equal(1, r.insertedCount);
+};
+
 let pickedMood = 0;
 let moodNote = '';
 let userMood = [];
@@ -62,6 +69,7 @@ smileys.forEach(smiley => smiley.addEventListener('click', function(){
 submitFeeligns.addEventListener('click', function(){
   moodNote = JSON.stringify(moodNoteTextarea.value);
   setLocalStorage(pickedMood, moodNote);
+  insertIntoDB(pickedMood, moodNote);
   moodNoteTextarea.value = '';
   pickedMood = 0;
   toggleModal();
