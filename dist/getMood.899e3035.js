@@ -19091,8 +19091,8 @@ var pieChart = new _chart2.default(ctx, {
       label: [],
       data: moodArray,
       backgroundColor: ['rgba(6, 146, 6, 1)', 'rgba(100, 255, 100, 1)', 'rgba(255, 255, 0, 1)', 'rgba(255, 135, 15, 1)', 'rgba(225, 11, 11, 1)'],
-      borderColor: 'white',
-      borderWidth: 5
+      borderColor: '#aaaaaa',
+      borderWidth: 2
     }]
   },
   options: {
@@ -19154,7 +19154,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52456' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '57812' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 

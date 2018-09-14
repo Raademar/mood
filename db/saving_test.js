@@ -1,6 +1,8 @@
 const mocha = require('mocha');
 const assert = require('assert');
 const UserEntry = require('../models/userEntries');
+
+let today = new Date('YYYY-mm-dd');
 // Describe tests
 describe('Saving records', function(){
 
@@ -8,7 +10,7 @@ describe('Saving records', function(){
   it('Saves a record to the datebase', function(done){
 
     var user = new UserEntry({
-      date: '2018-09-12',
+      date: '2018-09-14',
       mood: 4,
       note: 'Good day today, working on my cool application.'
     });

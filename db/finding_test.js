@@ -5,11 +5,12 @@ const UserEntry = require('../models/userEntries');
 // Describe tests
 describe('Finding records', function(){
 
+let today = new Date('YYYY-mm-dd');  
 let user;
   
 beforeEach(function(done){
   user = new UserEntry({
-    date: '2018-09-12',
+    date: '2018-09-14',
     mood: 4,
     note: 'Good day today, working on my cool application.'
   });

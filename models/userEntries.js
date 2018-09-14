@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 // Create Schema and Model.
 
 const UserEntrySchema = new Schema({
-  date: String,
+  date: Date,
   mood: Number,
   note: String
 });
