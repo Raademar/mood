@@ -4,8 +4,7 @@ const UserEntry = require('../models/userEntries');
 
 // Describe tests
 describe('Finding records', function(){
-
-let today = new Date('YYYY-mm-dd');  
+  
 let user;
   
 beforeEach(function(done){

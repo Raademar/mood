@@ -2,7 +2,6 @@ const mocha = require('mocha');
 const assert = require('assert');
 const UserEntry = require('../models/userEntries');
 
-let today = new Date('YYYY-mm-dd');
 // Describe tests
 describe('Saving records', function(){
 

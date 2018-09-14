@@ -1,7 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
-const dbName = 'mood';
-const url = 'mongodb://localhost:27017/mood';
 
 const insertDocuments = function(db, callback){
   // Get the userentries collection
@@ -66,18 +64,37 @@ const indexCollection = function(db, callback){
   );
 };
 
-// Set async connection function.
-MongoClient.connect(url, function(err, client){
-  assert.equal(null, err);
-  console.log('Connection was successfull to the server!');
+(async function(){
+
+const url = 'mongodb://localhost:27017/mood';
+const dbName = 'mood';
+let client;
+
+try {
+  client = await MongoClient.connect(url)
   const db = client.db(dbName);
-  insertDocuments(db, function(){
-    //updateDocuments(db, function(){
-      //removeDocument(db, function(){
-        indexCollection(db, function(){
-          client.close();
-        });
-      });
-    //});
-  //});
-});
+
+  let r = await db.collection('userentries').insertOne({mood: 6, note: 'Hejsan kompis'});
+  assert.equal(1, r.insertedCount);
+
+
+  // assert.equal(null, err);
+  // console.log('Connection was successfull to the server!');
+  // insertDocuments(db, function(){
+  //   //updateDocuments(db, function(){
+  //     //removeDocument(db, function(){
+  //       indexCollection(db, function(){
+  //         client.close();
+  //       });
+  //     });
+  //   //});
+  // //});
+
+} catch (err) {
+  console.log(err.stack)
+}
+if (client) {
+  console.log('Connection successfull!')
+  client.close();
+}
+})();
